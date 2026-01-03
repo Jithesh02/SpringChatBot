@@ -3,21 +3,20 @@ package com.example.demo.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.query.BindableType;
 
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
-public class User {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String fullName;
-    private String email;
+    private String emailAddress;
     private String phoneNumber;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     private List<Converstion> converstion;
 }

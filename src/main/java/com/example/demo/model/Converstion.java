@@ -17,8 +17,10 @@ public class Converstion {
     private boolean ticketCreated;
 
     @ManyToOne
-    private User user;
+    private Customer customer;
 
     @OneToOne(mappedBy = "converstion")
     private Ticket ticket;
+
+
 }
